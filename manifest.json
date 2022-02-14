@@ -6,7 +6,17 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": [
+    "storage", 
+    "activeTab", 
+    "scripting", 
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://github.com/",
+    "https://leetcode.com/",
+    "https://leetcode-cn.com/"
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
