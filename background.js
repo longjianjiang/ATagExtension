@@ -7,15 +7,16 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
     let url = new URL(tab.url);
     let host = url.hostname;
 
-    chrome.storage.sync.get(host, (res) => {
-      if (res[host] == true) {
-        console.log("do change.");
-        chrome.scripting.executeScript({
-          target: { tabId: tabId },
-          function: firstOpenATag,
-        });
-      }
-    });
+    setTimeout(() => {
+      chrome.storage.sync.get(host, (res) => {
+        if (res[host] == true) {
+          chrome.scripting.executeScript({
+            target: { tabId: tabId },
+            function: firstOpenATag,
+          });
+        }
+      });
+    }, 5000);
   }
 });
 

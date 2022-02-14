@@ -1,6 +1,6 @@
 {
   "name": "ATagExtension",
-  "description": "Make <a> tag open in new tab.",
+  "description": "Make <a> tag always open in new tab.",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
