@@ -2,6 +2,7 @@ chrome.runtime.onInstalled.addListener(() => {
   // do nothing.
 });
 
+/*
 chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
   if (changeInfo.status == 'complete') {
     let url = new URL(tab.url);
@@ -26,3 +27,4 @@ function firstOpenATag() {
     links[i].target = "_blank";
   }
 }
+*/
