@@ -52,7 +52,10 @@ function openATagExtension() {
 
   var links = document.getElementsByTagName('a');
   for (var i=0, len=links.length; i < len; i++) {
-    links[i].target = "_blank";
+    var my_url = new URL(links[i].href);
+    if (my_url.hash.length == 0) {
+      links[i].target = "_blank";
+    }
   }
 }
 
