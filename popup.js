@@ -17,7 +17,7 @@ chrome.tabs.query({active: true, currentWindow: true}, tabs => {
         });
       }
     } else {
-      isATagOpenNewTab = false;
+      isATagOpenNewTab.checked = false;
     }
   });
 });
